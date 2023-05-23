@@ -1,0 +1,62 @@
+.char {
+    &_panel {
+        position: relative;
+        padding: 25px;
+        margin-top: 30px;
+        min-height: 180px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        background-color: #fff;
+
+        label {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 18px;
+            color: #000000;
+        }
+
+        input {
+            margin-top: 15px;
+            width: 250px;
+            height: 38px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 2px;
+            border: none;
+            padding: 0 10px; // cursor to the left
+
+            &:focus {
+                outline: 1px solid #f57507;
+            }
+
+            &::placeholder {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+        &__btns {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            position: absolute;
+            right: 25px;
+            top: 64px;
+    
+            a:nth-child(2) {
+                margin-top: 10px;
+            }
+        }
+        &__error, &__message {
+            margin-top: 25px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            color: #9F0013;
+
+        }
+        &__message {
+            color: #03710E;
+        }
+    }   
+}

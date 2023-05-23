@@ -1,0 +1,71 @@
+
+
+// html {
+//     height: 100%;
+// } 
+
+
+svg#Layer_1 {
+  width: 200px;
+  transform: translateX(-50%)translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display : block;
+}
+
+$dash: 150;
+$time: 2s;
+
+$flash: 2s;
+$delay: 0.5s;
+
+ @keyframes draw{
+  0% { stroke:  #42c0ff} 
+  100% {stroke-dashoffset: $dash * 2; }
+}
+
+ @keyframes letterflash{
+  0% { fill:  #42c0ff} 
+  100% {fill: #ffa100}
+}
+
+@keyframes spinnerflash{
+  0% { stroke:  #42c0ff} 
+  100% {stroke: #ffa100}
+}
+
+
+
+.circle {
+  stroke-dasharray: $dash;
+  animation:(draw $time linear infinite);
+}
+
+
+.one,.two,.three,.four,.five,.six {
+     animation:(letterflash $flash ease-in-out infinite);
+}
+  
+
+.six {
+   animation-delay:($delay)
+}
+
+.five {
+ animation-delay:($delay - 0.1)
+}
+
+.four {
+ animation-delay:( $delay - 0.2)
+}
+.three {
+ animation-delay:( $delay - 0.3)
+}
+.two {
+ animation-delay:( $delay - 0.4)
+}
+
+.one {
+ animation-delay:( $delay - 0.5)
+}

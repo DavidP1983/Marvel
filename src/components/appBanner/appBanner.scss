@@ -1,0 +1,43 @@
+@import '../../style/variables.scss';
+
+.app {
+    &__banner {
+        margin-top: 50px;
+        width: 100%;
+        background-color: $dark;
+        height: 100px;
+        padding: 0 25px 0 45px;
+        display: grid;
+        grid-template-columns: 152px auto 133px;
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 75%; /* may have to change the top for a taller page */
+            bottom: 30px; /* may have to change the bottom for a taller page */
+            box-shadow: 0 12px 18px 12px rgba(14, 15, 15, .90); /* this is for the curled page corners */
+            z-index: -1;
+        }
+        /* left bottom corner shadow */
+        &::before {
+            left: 5px;
+            right: 50px;
+            transform: rotate(-3deg); /* may have to change the degrees rotated for a wider page */
+        }
+        /* right bottom corner shadow */
+        &::after {
+            left: 50px;
+            right: 5px;
+            transform: rotate(3deg); /* may have to change the degrees rotated for a wider page */
+        }
+        &-text {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            color: #FFFFFF;
+            padding-left: 83px;
+            padding-top: 18px;
+        }
+    }
+}
